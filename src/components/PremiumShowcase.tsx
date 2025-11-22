@@ -1,31 +1,34 @@
-import { motion } from 'framer-motion';
-import { Star, Sparkles } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Star, Sparkles, Phone } from "lucide-react";
+import toyotaFortuner from "../assets/images/toyota-fortuner.png";
+import mahindraXuv from "../assets/images/mahindra-xuv.png";
+import innovaCrysta from "../assets/images/innova-crysta.png";
 
 const PremiumShowcase = () => {
   const premiumCars = [
     {
       id: 1,
-      name: 'Fortuner',
-      brand: 'Toyota',
-      tagline: 'The Ultimate SUV',
-      features: ['4WD Capability', 'Premium Interior', '7-Seater Luxury'],
-      image: '/toyota-fortuner.png',
+      name: "Fortuner",
+      brand: "Toyota",
+      tagline: "The Ultimate SUV",
+      features: ["4WD Capability", "Premium Interior", "7-Seater Luxury"],
+      image: toyotaFortuner,
     },
     {
       id: 2,
-      name: 'XUV700',
-      brand: 'Mahindra',
-      tagline: 'Tech-Loaded Powerhouse',
-      features: ['Advanced Safety', 'Premium Features', 'Powerful Engine'],
-      image: '/mahindra-xuv.png',
+      name: "XUV700",
+      brand: "Mahindra",
+      tagline: "Tech-Loaded Powerhouse",
+      features: ["Advanced Safety", "Premium Features", "Powerful Engine"],
+      image: mahindraXuv,
     },
     {
       id: 3,
-      name: 'Innova Crysta',
-      brand: 'Toyota',
-      tagline: 'Family Comfort Redefined',
-      features: ['Spacious Cabin', 'Reliable Performance', 'Premium MPV'],
-      image: '/innova-crysta.png',
+      name: "Innova Crysta",
+      brand: "Toyota",
+      tagline: "Family Comfort Redefined",
+      features: ["Spacious Cabin", "Reliable Performance", "Premium MPV"],
+      image: innovaCrysta,
     },
   ];
 
@@ -33,7 +36,7 @@ const PremiumShowcase = () => {
     <section className="section-padding bg-gradient-to-b from-dark-800 via-dark-900 to-dark-800 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl"></div>
-      
+
       <div className="container-custom relative z-10">
         {/* Section Header */}
         <motion.div
@@ -51,7 +54,8 @@ const PremiumShowcase = () => {
             Luxury <span className="gradient-text">Vehicles</span> Showcase
           </h2>
           <p className="text-dark-300 text-base md:text-lg max-w-2xl mx-auto">
-            Discover our handpicked selection of premium vehicles that combine luxury, performance, and reliability
+            Discover our handpicked selection of premium vehicles that combine
+            luxury, performance, and reliability
           </p>
         </motion.div>
 
@@ -79,8 +83,8 @@ const PremiumShowcase = () => {
                 <div className="card overflow-hidden h-full bg-gradient-to-br from-dark-800/80 to-dark-700/80 border-2 border-dark-600 hover:border-primary-500/50 transition-all duration-500 group-hover:scale-[1.02]">
                   {/* Image */}
                   <div className="relative overflow-hidden rounded-xl mb-6 aspect-[16/10]">
-                    <img 
-                      src={car.image} 
+                    <img
+                      src={car.image}
                       alt={`${car.brand} ${car.name}`}
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                     />
@@ -104,7 +108,10 @@ const PremiumShowcase = () => {
                     {/* Features */}
                     <div className="space-y-2">
                       {car.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-dark-300 text-sm">
+                        <div
+                          key={idx}
+                          className="flex items-center gap-2 text-dark-300 text-sm"
+                        >
                           <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
                           <span>{feature}</span>
                         </div>
@@ -136,9 +143,13 @@ const PremiumShowcase = () => {
           className="text-center mt-12 md:mt-16"
         >
           <p className="text-dark-300 mb-6">
-            Interested in our premium collection? Get in touch with our team today!
+            Interested in our premium collection? Get in touch with our team
+            today!
           </p>
-          <a href="tel:+919063582078" className="btn-primary inline-flex items-center gap-2">
+          <a
+            href="tel:+919063582078"
+            className="btn-primary inline-flex items-center gap-2"
+          >
             <Phone size={20} />
             Call for Premium Vehicles
           </a>
@@ -147,8 +158,5 @@ const PremiumShowcase = () => {
     </section>
   );
 };
-
-// Import Phone icon
-import { Phone } from 'lucide-react';
 
 export default PremiumShowcase;

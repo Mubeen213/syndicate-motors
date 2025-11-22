@@ -1,36 +1,39 @@
-import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Phone, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      details: ['+91 90635 82078'],
-      link: 'tel:+919063582078',
-      color: 'from-blue-500 to-blue-600',
+      title: "Phone",
+      details: ["+91 90635 82078"],
+      link: "tel:+919063582078",
+      color: "from-blue-500 to-blue-600",
     },
     {
       icon: MapPin,
-      title: 'Location',
+      title: "Location",
       details: [
-        'Opp. HP Petrol Pump, Piller No 166',
-        'Siva Nagar, Attapur, Upperpally',
-        'Hyderabad, Telangana 500048',
+        "Opp. HP Petrol Pump, Piller No 166",
+        "Siva Nagar, Attapur, Upperpally",
+        "Hyderabad, Telangana 500048",
       ],
-      link: 'https://maps.google.com/?q=Syndicate+Motors+Attapur+Hyderabad',
-      color: 'from-green-500 to-green-600',
+      link: "https://maps.google.com/?q=Syndicate+Motors+Attapur+Hyderabad",
+      color: "from-green-500 to-green-600",
     },
     {
       icon: Clock,
-      title: 'Working Hours',
-      details: ['Mon - Sat: 9:00 AM - 8:00 PM', 'Sunday: 10:00 AM - 6:00 PM'],
-      color: 'from-orange-500 to-orange-600',
+      title: "Working Hours",
+      details: ["Mon - Sat: 9:00 AM - 8:00 PM", "Sunday: 10:00 AM - 6:00 PM"],
+      color: "from-orange-500 to-orange-600",
     },
   ];
 
   return (
-    <section id="contact" className="section-padding bg-dark-900 relative overflow-hidden">
+    <section
+      id="contact"
+      className="section-padding bg-dark-900 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary-500/5 rounded-full filter blur-3xl"></div>
 
@@ -50,7 +53,8 @@ const Contact = () => {
             Contact <span className="gradient-text">Us</span>
           </h2>
           <p className="text-dark-300 text-base md:text-lg max-w-2xl mx-auto">
-            Visit our showroom in Attapur or reach out to us. We're here to help you find your perfect vehicle.
+            Visit our showroom in Attapur or reach out to us. We're here to help
+            you find your perfect vehicle.
           </p>
         </motion.div>
 
@@ -68,13 +72,18 @@ const Contact = () => {
                 className="group"
               >
                 <div className="card h-full hover:scale-105 transition-transform duration-300">
-                  <div className={`w-14 h-14 mb-4 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-14 h-14 mb-4 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <Icon size={28} className="text-white" />
                   </div>
                   <h3 className="text-white font-bold mb-3">{info.title}</h3>
                   <div className="space-y-1">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-dark-300 text-sm leading-relaxed">
+                      <p
+                        key={idx}
+                        className="text-dark-300 text-sm leading-relaxed"
+                      >
                         {detail}
                       </p>
                     ))}
@@ -84,14 +93,21 @@ const Contact = () => {
                       href={info.link}
                       className="inline-flex items-center text-primary-400 hover:text-primary-300 font-medium mt-4 group/link"
                     >
-                      {'Get Directions'}
+                      {info.title == "Location"
+                        ? "Get Directions"
+                        : "Make a Call"}
                       <svg
                         className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </a>
                   )}
@@ -120,7 +136,8 @@ const Contact = () => {
                 Ready to Find Your Dream Car?
               </h3>
               <p className="text-primary-100 text-base md:text-lg mb-8 max-w-2xl mx-auto">
-                Visit our Office or give us a call. Our expert team is ready to help you!
+                Visit our Office or give us a call. Our expert team is ready to
+                help you!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
