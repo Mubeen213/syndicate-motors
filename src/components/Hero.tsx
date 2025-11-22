@@ -1,10 +1,13 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, Phone } from 'lucide-react';
-import toyotaFortuner from '../assets/images/toyota-fortuner.png';
+import { motion } from "framer-motion";
+import { ArrowRight, Phone } from "lucide-react";
+import toyotaFortuner from "../assets/images/toyota-fortuner.png";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20"
+    >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900">
         <div className="absolute inset-0 opacity-20">
@@ -36,8 +39,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl text-dark-300 max-w-2xl mx-auto lg:mx-0"
             >
-              Discover premium vehicles from India's most trusted brands. 
-              Experience excellence in automotive retail at Hyderabad's premier car dealership.
+              Discover premium vehicles from India's most trusted brands.
+              Experience excellence in automotive retail at Hyderabad's premier
+              car dealership.
             </motion.p>
 
             <motion.div
@@ -48,7 +52,10 @@ const Hero = () => {
             >
               <a href="#inventory" className="btn-primary group">
                 Browse Inventory
-                <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                <ArrowRight
+                  className="inline-block ml-2 group-hover:translate-x-1 transition-transform"
+                  size={20}
+                />
               </a>
               <a href="tel:+919876543210" className="btn-secondary group">
                 <Phone className="inline-block mr-2" size={20} />
@@ -64,9 +71,9 @@ const Hero = () => {
               className="grid grid-cols-3 gap-4 md:gap-8 pt-8 md:pt-12"
             >
               {[
-                { value: '200+', label: 'Premium Cars' },
-                { value: '15+', label: 'Top Brands' },
-                { value: '5K+', label: 'Happy Clients' },
+                { value: "200+", label: "Premium Cars" },
+                { value: "15+", label: "Top Brands" },
+                { value: "5K+", label: "Happy Clients" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text">
@@ -85,11 +92,11 @@ const Hero = () => {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-primary-700/20 rounded-3xl blur-3xl"></div>
-              
+
               {/* Car Image */}
               <div className="relative bg-gradient-to-br from-dark-800/50 to-dark-700/50 rounded-3xl p-8 border border-dark-700/50 backdrop-blur-sm">
-                <img 
-                  src={toyotaFortuner} 
+                <img
+                  src={toyotaFortuner}
                   alt="Toyota Fortuner"
                   className="w-full h-auto"
                 />

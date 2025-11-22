@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion';
-import { Fuel, Gauge, Settings, Heart, Eye } from 'lucide-react';
-import { useState } from 'react';
-import toyotaFortuner from '../assets/images/toyota-fortuner.png';
-import innovaCrysta from '../assets/images/innova-crysta.png';
-import marutiSwift from '../assets/images/maruti-swift.png';
-import hyundaiI20 from '../assets/images/hyundai-i20.png';
-import marutiBaleno from '../assets/images/maruti-baleno.png';
-import mahindraXuv from '../assets/images/mahindra-xuv.png';
+import { motion } from "framer-motion";
+import { Fuel, Gauge, Settings, Heart, Eye } from "lucide-react";
+import { useState } from "react";
+import toyotaFortuner from "../assets/images/toyota-fortuner.png";
+import innovaCrysta from "../assets/images/innova-crysta.png";
+import marutiSwift from "../assets/images/maruti-swift.png";
+import hyundaiI20 from "../assets/images/hyundai-i20.png";
+import marutiBaleno from "../assets/images/maruti-baleno.png";
+import mahindraXuv from "../assets/images/mahindra-xuv.png";
 
 interface Car {
   id: number;
@@ -21,84 +21,87 @@ interface Car {
 }
 
 const FeaturedCars = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const cars: Car[] = [
     {
       id: 1,
-      name: 'Fortuner',
-      brand: 'Toyota',
+      name: "Fortuner",
+      brand: "Toyota",
       year: 2024,
-      mileage: '15,000 km',
-      fuelType: 'Diesel',
-      transmission: 'Automatic',
+      mileage: "15,000 km",
+      fuelType: "Diesel",
+      transmission: "Automatic",
       image: toyotaFortuner,
       featured: true,
     },
     {
       id: 2,
-      name: 'Innova Crysta',
-      brand: 'Toyota',
+      name: "Innova Crysta",
+      brand: "Toyota",
       year: 2023,
-      mileage: '25,000 km',
-      fuelType: 'Diesel',
-      transmission: 'Manual',
+      mileage: "25,000 km",
+      fuelType: "Diesel",
+      transmission: "Manual",
       image: innovaCrysta,
       featured: true,
     },
     {
       id: 3,
-      name: 'Swift',
-      brand: 'Maruti Suzuki',
+      name: "Swift",
+      brand: "Maruti Suzuki",
       year: 2024,
-      mileage: '8,000 km',
-      fuelType: 'Petrol',
-      transmission: 'Manual',
+      mileage: "8,000 km",
+      fuelType: "Petrol",
+      transmission: "Manual",
       image: marutiSwift,
       featured: false,
     },
     {
       id: 4,
-      name: 'i20',
-      brand: 'Hyundai',
+      name: "i20",
+      brand: "Hyundai",
       year: 2024,
-      mileage: '12,000 km',
-      fuelType: 'Petrol',
-      transmission: 'Automatic',
+      mileage: "12,000 km",
+      fuelType: "Petrol",
+      transmission: "Automatic",
       image: hyundaiI20,
       featured: true,
     },
     {
       id: 5,
-      name: 'Baleno',
-      brand: 'Maruti Suzuki',
+      name: "Baleno",
+      brand: "Maruti Suzuki",
       year: 2023,
-      mileage: '18,000 km',
-      fuelType: 'Petrol',
-      transmission: 'Automatic',
+      mileage: "18,000 km",
+      fuelType: "Petrol",
+      transmission: "Automatic",
       image: marutiBaleno,
       featured: false,
     },
     {
       id: 6,
-      name: 'XUV700',
-      brand: 'Mahindra',
+      name: "XUV700",
+      brand: "Mahindra",
       year: 2024,
-      mileage: '10,000 km',
-      fuelType: 'Diesel',
-      transmission: 'Automatic',
+      mileage: "10,000 km",
+      fuelType: "Diesel",
+      transmission: "Automatic",
       image: mahindraXuv,
       featured: true,
     },
   ];
 
-  const filters = ['all', 'luxury', 'suv', 'sports', 'electric'];
+  const filters = ["all", "luxury", "suv", "sports", "electric"];
 
   return (
-    <section id="inventory" className="section-padding bg-dark-900 relative overflow-hidden">
+    <section
+      id="inventory"
+      className="section-padding bg-dark-900 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full filter blur-3xl"></div>
-      
+
       <div className="container-custom relative z-10">
         {/* Section Header */}
         <motion.div
@@ -115,7 +118,8 @@ const FeaturedCars = () => {
             Featured <span className="gradient-text">Vehicles</span>
           </h2>
           <p className="text-dark-300 text-base md:text-lg max-w-2xl mx-auto">
-            Explore our handpicked selection of premium vehicles from the world's finest manufacturers
+            Explore our handpicked selection of premium vehicles from the
+            world's finest manufacturers
           </p>
         </motion.div>
 
@@ -133,8 +137,8 @@ const FeaturedCars = () => {
               onClick={() => setActiveFilter(filter)}
               className={`px-6 py-2.5 rounded-full font-medium capitalize transition-all duration-300 ${
                 activeFilter === filter
-                  ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white shadow-lg shadow-primary-500/30'
-                  : 'bg-dark-800 text-dark-300 hover:bg-dark-700 border border-dark-700'
+                  ? "bg-gradient-to-r from-primary-600 to-primary-500 text-white shadow-lg shadow-primary-500/30"
+                  : "bg-dark-800 text-dark-300 hover:bg-dark-700 border border-dark-700"
               }`}
             >
               {filter}
@@ -157,8 +161,8 @@ const FeaturedCars = () => {
                 {/* Image Container */}
                 <div className="relative overflow-hidden rounded-xl mb-4 aspect-[4/3]">
                   {/* Car Image */}
-                  <img 
-                    src={car.image} 
+                  <img
+                    src={car.image}
                     alt={`${car.brand} ${car.name}`}
                     className="w-full h-full object-cover"
                   />
@@ -210,7 +214,10 @@ const FeaturedCars = () => {
 
                   {/* CTA */}
                   <div className="mt-auto pt-4 border-t border-dark-700">
-                    <a href="tel:+919063582078" className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors w-full block text-center">
+                    <a
+                      href="tel:+919063582078"
+                      className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors w-full block text-center"
+                    >
                       Inquire Now
                     </a>
                   </div>
