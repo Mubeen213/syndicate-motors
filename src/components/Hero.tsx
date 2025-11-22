@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone } from 'lucide-react';
+import toyotaFortuner from '../assets/images/toyota-fortuner.png';
 
 const Hero = () => {
   return (
@@ -88,7 +89,7 @@ const Hero = () => {
               {/* Car Image */}
               <div className="relative bg-gradient-to-br from-dark-800/50 to-dark-700/50 rounded-3xl p-8 border border-dark-700/50 backdrop-blur-sm">
                 <img 
-                  src="/toyota-fortuner.png" 
+                  src={toyotaFortuner} 
                   alt="Toyota Fortuner"
                   className="w-full h-auto"
                 />

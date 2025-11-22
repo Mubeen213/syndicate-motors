@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
 import { Fuel, Gauge, Settings, Heart, Eye } from 'lucide-react';
 import { useState } from 'react';
+import toyotaFortuner from '../assets/images/toyota-fortuner.png';
+import innovaCrysta from '../assets/images/innova-crysta.png';
+import marutiSwift from '../assets/images/maruti-swift.png';
+import hyundaiI20 from '../assets/images/hyundai-i20.png';
+import marutiBaleno from '../assets/images/maruti-baleno.png';
+import mahindraXuv from '../assets/images/mahindra-xuv.png';
 
 interface Car {
   id: number;
@@ -26,7 +32,7 @@ const FeaturedCars = () => {
       mileage: '15,000 km',
       fuelType: 'Diesel',
       transmission: 'Automatic',
-      image: '/toyota-fortuner.png',
+      image: toyotaFortuner,
       featured: true,
     },
     {
@@ -37,7 +43,7 @@ const FeaturedCars = () => {
       mileage: '25,000 km',
       fuelType: 'Diesel',
       transmission: 'Manual',
-      image: '/innova-crysta.png',
+      image: innovaCrysta,
       featured: true,
     },
     {
@@ -48,7 +54,7 @@ const FeaturedCars = () => {
       mileage: '8,000 km',
       fuelType: 'Petrol',
       transmission: 'Manual',
-      image: '/maruti-swift.png',
+      image: marutiSwift,
       featured: false,
     },
     {
@@ -59,7 +65,7 @@ const FeaturedCars = () => {
       mileage: '12,000 km',
       fuelType: 'Petrol',
       transmission: 'Automatic',
-      image: '/hyundai-i20.png',
+      image: hyundaiI20,
       featured: true,
     },
     {
@@ -70,7 +76,7 @@ const FeaturedCars = () => {
       mileage: '18,000 km',
       fuelType: 'Petrol',
       transmission: 'Automatic',
-      image: '/maruti-baleno.png',
+      image: marutiBaleno,
       featured: false,
     },
     {
@@ -81,7 +87,7 @@ const FeaturedCars = () => {
       mileage: '10,000 km',
       fuelType: 'Diesel',
       transmission: 'Automatic',
-      image: '/mahindra-xuv.png',
+      image: mahindraXuv,
       featured: true,
     },
   ];
